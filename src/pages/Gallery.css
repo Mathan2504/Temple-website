@@ -1,0 +1,30 @@
+.gallery-page__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.gallery-page__header .section-header {
+  margin-bottom: 0;
+  text-align: left;
+  flex: 1;
+  min-width: 240px;
+}
+
+.gallery-page__admin {
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .gallery-page__header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .gallery-page__header .section-header {
+    text-align: center;
+  }
+}

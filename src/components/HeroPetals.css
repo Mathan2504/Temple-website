@@ -1,0 +1,59 @@
+.hero-petals {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-petal {
+  position: absolute;
+  top: -8%;
+  width: 14px;
+  height: 14px;
+  border-radius: 0 60% 0 60%;
+  background: linear-gradient(135deg, var(--saffron-light), var(--gold));
+  opacity: 0;
+  animation: petal-fall 14s linear infinite;
+}
+
+.hero-petal--1 { left: 8%;  animation-delay: 0s;  animation-duration: 16s; }
+.hero-petal--2 { left: 22%; animation-delay: 3s;  animation-duration: 19s; }
+.hero-petal--3 { left: 38%; animation-delay: 7s;  animation-duration: 15s; }
+.hero-petal--4 { left: 55%; animation-delay: 1.5s; animation-duration: 18s; }
+.hero-petal--5 { left: 68%; animation-delay: 5s;  animation-duration: 14s; }
+.hero-petal--6 { left: 82%; animation-delay: 9s;  animation-duration: 20s; }
+.hero-petal--7 { left: 92%; animation-delay: 4s;  animation-duration: 17s; }
+
+@keyframes petal-fall {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.65;
+  }
+  50% {
+    transform: translateY(50vh) translateX(24px) rotate(190deg);
+  }
+  92% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(102vh) translateX(-16px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-petals {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-petal {
+    width: 10px;
+    height: 10px;
+  }
+}

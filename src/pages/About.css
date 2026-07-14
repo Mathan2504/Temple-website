@@ -1,0 +1,54 @@
+.about-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.about-page__item {
+  display: flex;
+  gap: 1.4rem;
+  padding: 1.8rem;
+}
+
+.about-page__number {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--gold);
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.about-page__title {
+  color: var(--maroon-deep);
+  font-size: 1.35rem;
+}
+
+[data-theme="dark"] .about-page__title {
+  color: var(--gold-light);
+}
+
+.about-page__title-en {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--saffron);
+  margin-bottom: 0.7rem;
+}
+
+.about-page__body {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.75;
+}
+
+.about-page__body-en {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 560px) {
+  .about-page__item {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+}

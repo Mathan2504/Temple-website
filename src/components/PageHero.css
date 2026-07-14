@@ -1,0 +1,42 @@
+.page-hero {
+  position: relative;
+  background: linear-gradient(160deg, var(--maroon-deep) 0%, var(--maroon) 60%, var(--brown-deep) 100%);
+  padding: 4.5rem 0 3.5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.page-hero__kolam {
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  background-image: radial-gradient(circle, var(--gold) 1.5px, transparent 1.6px);
+  background-size: 30px 30px;
+}
+
+.page-hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero__title {
+  font-family: var(--font-tamil);
+  color: var(--gold-light);
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  font-weight: 700;
+}
+
+.page-hero__title-en {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--gold);
+  font-size: 1.1rem;
+  margin-top: 0.4rem;
+}
+
+.page-hero__subtitle {
+  color: rgba(243, 227, 187, 0.75);
+  max-width: 60ch;
+  margin: 1rem auto 0;
+  font-size: 0.95rem;
+}

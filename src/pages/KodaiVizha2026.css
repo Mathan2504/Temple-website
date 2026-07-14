@@ -1,0 +1,129 @@
+.kodai-poster {
+  display: block;
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.kodai-poster__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 8 / 11;
+  object-fit: cover;
+}
+
+.kodai-poster__zoom-hint {
+  position: absolute;
+  bottom: 0.8rem;
+  right: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(74, 14, 26, 0.85);
+  color: var(--gold-light);
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+}
+
+.kodai-timetable {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.kodai-timetable__row {
+  display: grid;
+  grid-template-columns: 1fr 2fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.3rem;
+}
+
+.kodai-timetable__day {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.kodai-timetable__day-label {
+  display: block;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--saffron);
+  font-size: 0.95rem;
+}
+
+.kodai-timetable__day-ta {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.kodai-timetable__event p {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.kodai-timetable__event-en {
+  font-weight: 400 !important;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.kodai-timetable__time {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .kodai-timetable__row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    text-align: left;
+  }
+}
+
+/* ZOOM LIGHTBOX */
+.kodai-zoom-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 250;
+  background: rgba(20, 10, 6, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  overflow: auto;
+}
+
+.kodai-zoom-overlay__img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-deep);
+  touch-action: pinch-zoom;
+}
+
+.kodai-zoom-overlay__close {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.4rem;
+  color: var(--gold-light);
+  background: rgba(201, 162, 75, 0.15);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+}

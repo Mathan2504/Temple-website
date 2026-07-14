@@ -1,0 +1,54 @@
+.announcement-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: var(--brown-deep);
+  color: var(--gold-light);
+  padding: 0.5rem 0;
+  overflow: hidden;
+}
+
+.announcement-bar__icon {
+  flex-shrink: 0;
+  margin-left: var(--space-md);
+  color: var(--saffron-light);
+}
+
+.announcement-bar__track {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.announcement-bar__scroll {
+  display: flex;
+  gap: 3.5rem;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.announcement-bar__item {
+  white-space: nowrap;
+  font-size: 0.85rem;
+}
+
+.announcement-bar__en {
+  font-family: var(--font-body);
+  opacity: 0.65;
+  font-size: 0.78rem;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .announcement-bar__scroll {
+    animation: none;
+  }
+}

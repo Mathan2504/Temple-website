@@ -1,0 +1,158 @@
+.pooja-days {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.pooja-days__card {
+  padding: 1.8rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pooja-days__card h3 {
+  font-size: 1.2rem;
+  color: var(--maroon-deep);
+}
+
+[data-theme="dark"] .pooja-days__card h3 {
+  color: var(--gold-light);
+}
+
+.pooja-days__time {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--saffron);
+  font-size: 1.15rem;
+}
+
+.pooja-note {
+  text-align: center;
+  max-width: 60ch;
+  margin: 0 auto 0.5rem;
+  color: var(--text-primary);
+}
+
+.pooja-note-en {
+  text-align: center;
+  max-width: 60ch;
+  margin: 0 auto;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.festival-section {
+  background: linear-gradient(160deg, var(--maroon-deep) 0%, var(--maroon) 100%);
+  text-align: center;
+}
+
+.festival-section__title {
+  font-family: var(--font-tamil);
+  color: var(--gold-light);
+  font-size: 1.9rem;
+  margin: 0.4rem 0;
+}
+
+.festival-section__title-en {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.festival-section__schedule {
+  color: var(--gold-soft);
+}
+
+.festival-section__schedule-en {
+  color: rgba(243, 227, 187, 0.6);
+  margin-bottom: 2rem;
+}
+
+.festival-section__countdown {
+  margin: 1.5rem 0 2.5rem;
+}
+
+.festival-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.festival-highlights__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(201, 162, 75, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+}
+
+.festival-highlights__item p {
+  color: var(--gold-soft);
+  font-weight: 600;
+}
+
+.festival-highlights__en {
+  font-weight: 400 !important;
+  color: rgba(243, 227, 187, 0.6) !important;
+  font-size: 0.82rem;
+}
+
+/* ===== FESTIVAL DAY SCHEDULE TABLE ===== */
+.schedule-table {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0.6rem;
+  overflow: hidden;
+}
+
+.schedule-table__row {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.1rem;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-base);
+}
+
+.schedule-table__row:nth-child(odd) {
+  background: rgba(201, 162, 75, 0.08);
+}
+
+.schedule-table__row:hover {
+  background: rgba(201, 162, 75, 0.18);
+}
+
+.schedule-table__time {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 600;
+  color: var(--saffron);
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+
+.schedule-table__event {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 560px) {
+  .schedule-table__row {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+    text-align: left;
+  }
+}

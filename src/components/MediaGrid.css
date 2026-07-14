@@ -1,0 +1,239 @@
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.1rem;
+}
+
+.media-grid--masonry {
+  display: block;
+  column-count: 3;
+  column-gap: 1.1rem;
+}
+
+.media-grid--masonry .media-grid__tile {
+  break-inside: avoid;
+  margin-bottom: 1.1rem;
+  display: inline-block;
+  width: 100%;
+}
+
+.media-grid--masonry .media-grid__thumb {
+  aspect-ratio: auto;
+}
+
+.media-grid--masonry .media-grid__img {
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .media-grid--masonry {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 560px) {
+  .media-grid--masonry {
+    column-count: 1;
+  }
+}
+
+.media-grid__tile {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.media-grid__thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(150deg, var(--maroon) 0%, var(--brown-deep) 100%);
+  overflow: hidden;
+}
+
+.media-grid__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.media-grid__thumb:hover .media-grid__img {
+  transform: scale(1.08);
+}
+
+.media-grid__play {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: rgba(20, 10, 6, 0.25);
+}
+
+.media-grid__admin-actions {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.media-grid__admin-actions button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(20, 10, 6, 0.65);
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+
+.media-grid__admin-actions button:hover {
+  background: var(--saffron);
+}
+
+.media-grid__loading,
+.media-grid__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+}
+
+.media-grid__spinner {
+  animation: media-grid-spin 1s linear infinite;
+}
+
+@keyframes media-grid-spin {
+  to { transform: rotate(360deg); }
+}
+
+.media-grid__load-more {
+  text-align: center;
+  margin-top: var(--space-lg);
+}
+
+/* ===== VIEWER (lightbox / video modal) ===== */
+.media-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 250;
+  background: rgba(20, 10, 6, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+}
+
+.media-viewer__content {
+  max-width: 90vw;
+  max-height: 88vh;
+  text-align: center;
+}
+
+.media-viewer__content img,
+.media-viewer__content video {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-deep);
+}
+
+.media-viewer__close {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.4rem;
+  color: var(--gold-light);
+  background: rgba(201, 162, 75, 0.15);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+}
+
+.media-viewer__nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold-light);
+  background: rgba(201, 162, 75, 0.15);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+}
+
+.media-viewer__nav--prev { left: 1rem; }
+.media-viewer__nav--next { right: 1rem; }
+
+/* ===== EDIT MODAL ===== */
+.media-edit-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 260;
+  background: rgba(20, 10, 6, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+}
+
+.media-edit-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.media-edit-form h3 {
+  color: var(--maroon-deep);
+  font-size: 1.15rem;
+}
+
+[data-theme="dark"] .media-edit-form h3 {
+  color: var(--gold-light);
+}
+
+.media-edit-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.media-edit-form input,
+.media-edit-form textarea {
+  border: 1.5px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.8rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  resize: vertical;
+}
+
+.media-edit-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  margin-top: 0.3rem;
+}
+
+@media (max-width: 480px) {
+  .media-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}

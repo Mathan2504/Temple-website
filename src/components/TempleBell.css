@@ -1,0 +1,37 @@
+.temple-bell {
+  position: fixed;
+  bottom: 1.4rem;
+  right: 1.4rem;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--cream) 0%, var(--gold-soft) 100%);
+  box-shadow: var(--shadow-gold);
+  display: grid;
+  place-items: center;
+  z-index: 60;
+  animation: bell-float 3.4s ease-in-out infinite;
+}
+
+.temple-bell__svg {
+  width: 30px;
+  height: 42px;
+}
+
+@keyframes bell-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@media (min-width: 768px) {
+  .temple-bell {
+    bottom: 2rem;
+    right: 6.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .temple-bell {
+    animation: none;
+  }
+}

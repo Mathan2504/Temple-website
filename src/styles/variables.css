@@ -1,0 +1,62 @@
+:root {
+  /* ===== COLOR PALETTE ===== */
+  --maroon-deep: #7b1113;
+  --maroon: #93171a;
+  --maroon-light: #b3272b;
+  --gold: #d4af37;
+  --gold-light: #e8cc6e;
+  --gold-soft: #f5e6b3;
+  --saffron: #ff9933;
+  --saffron-light: #ffb366;
+  --cream: #fbf3e4;
+  --cream-deep: #f3e6cc;
+  --brown-deep: #2b1a12;
+  --brown: #4a2e1e;
+  --white: #ffffff;
+  --ink: #1f120c;
+
+  /* semantic */
+  --bg-page: var(--cream);
+  --bg-surface: #ffffff;
+  --bg-dark: var(--maroon-deep);
+  --text-primary: var(--ink);
+  --text-on-dark: var(--gold-soft);
+  --text-muted: #7a6250;
+  --accent: var(--gold);
+  --accent-strong: var(--saffron);
+  --border-soft: rgba(212, 175, 55, 0.35);
+
+  /* ===== TYPOGRAPHY ===== */
+  --font-tamil: "Hind Madurai", "Noto Sans Tamil", sans-serif;
+  --font-display: "Cormorant Garamond", "Hind Madurai", serif;
+  --font-body: "Poppins", "Hind Madurai", sans-serif;
+
+  /* ===== SPACING ===== */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.75rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+
+  /* ===== RADIUS / SHADOW ===== */
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --shadow-soft: 0 10px 40px rgba(123, 17, 19, 0.14);
+  --shadow-deep: 0 20px 60px rgba(43, 26, 18, 0.35);
+  --shadow-gold: 0 0 30px rgba(212, 175, 55, 0.5);
+
+  /* ===== LAYOUT ===== */
+  --max-width: 1240px;
+  --navbar-height: 84px;
+  --transition-base: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+  --bg-page: #170c08;
+  --bg-surface: #241410;
+  --bg-dark: #0f0704;
+  --text-primary: #f3e6cc;
+  --text-muted: #c7ac8d;
+  --border-soft: rgba(212, 175, 55, 0.28);
+}

@@ -1,0 +1,102 @@
+.whatsapp-group {
+  background: linear-gradient(160deg, var(--cream-deep) 0%, var(--cream) 100%);
+}
+
+[data-theme="dark"] .whatsapp-group {
+  background: linear-gradient(160deg, var(--bg-surface) 0%, var(--bg-page) 100%);
+}
+
+.whatsapp-group__inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.whatsapp-group__title {
+  font-family: var(--font-tamil);
+  color: var(--maroon-deep);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin: 0.4rem 0 0.15rem;
+}
+
+[data-theme="dark"] .whatsapp-group__title {
+  color: var(--gold-light);
+}
+
+.whatsapp-group__title-en {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--saffron);
+  margin-bottom: 1rem;
+}
+
+.whatsapp-group__desc {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  max-width: 52ch;
+  line-height: 1.75;
+}
+
+.whatsapp-group__desc-en {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  max-width: 52ch;
+}
+
+.whatsapp-group__hint {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--maroon-deep);
+  background: rgba(201, 162, 75, 0.16);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  padding: 0.8rem 1.1rem;
+  font-size: 0.88rem;
+  max-width: 46ch;
+}
+
+[data-theme="dark"] .whatsapp-group__hint {
+  color: var(--gold-light);
+}
+
+.whatsapp-group__card {
+  padding: 1.6rem;
+  text-align: center;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.whatsapp-group__qr-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+}
+
+.whatsapp-group__card-caption {
+  margin-top: 0.9rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 800px) {
+  .whatsapp-group__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .whatsapp-group__desc,
+  .whatsapp-group__desc-en {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .whatsapp-group__hint {
+    margin: 0 auto 1.5rem;
+  }
+}

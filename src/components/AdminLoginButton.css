@@ -1,0 +1,71 @@
+.admin-toggle-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.admin-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--border-soft);
+  color: var(--text-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--bg-surface);
+  transition: all var(--transition-base);
+}
+
+.admin-toggle:hover {
+  border-color: var(--gold);
+}
+
+.admin-toggle--active {
+  background: linear-gradient(135deg, var(--saffron), var(--gold));
+  color: var(--white);
+  border-color: transparent;
+}
+
+.admin-toggle__panel {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  right: 0;
+  z-index: 20;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-deep);
+  padding: 1.1rem;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.admin-toggle__panel label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.admin-toggle__panel input {
+  border: 1.5px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.7rem;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.admin-toggle__close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: var(--text-muted);
+}
+
+.admin-toggle__error {
+  color: var(--maroon);
+  font-size: 0.78rem;
+}

@@ -1,0 +1,38 @@
+.festival-countdown {
+  display: flex;
+  gap: 0.9rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.festival-countdown__unit {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(201, 162, 75, 0.4);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1.2rem;
+  min-width: 82px;
+  text-align: center;
+}
+
+.festival-countdown__value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold-light);
+}
+
+.festival-countdown__label {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--gold-soft);
+  opacity: 0.8;
+  margin-top: 0.2rem;
+}
+
+.festival-countdown__ended {
+  text-align: center;
+  color: var(--gold-light);
+  font-size: 1.2rem;
+}
